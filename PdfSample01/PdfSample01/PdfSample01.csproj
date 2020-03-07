@@ -94,6 +94,7 @@
     <Compile Include="PdfServiceByItextsharp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt\PdfServiceMultiPages.cs" />
     <Compile Include="Receipt\PdfService.cs" />
   </ItemGroup>
   <ItemGroup>

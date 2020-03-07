@@ -44,6 +44,21 @@ namespace PdfSample01
             //rowspanAndSplitting.SplittingNestedTable1();
             //rowspanAndSplitting.SplittingNestedTable2();
 
+            PdfService pdfService = new PdfService();
+            PdfServiceMultiPages pdfServiceMultiPages = new PdfServiceMultiPages();
+            ReceiptModel receiptModel = new ReceiptModel();
+
+
+            System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
+            long elapse;
+            stopwatch.Start();
+
+            //pdfService.CreateReceiptPdf(receiptModel);
+            pdfServiceMultiPages.CreateReceiptPdf(receiptModel);
+
+            elapse = stopwatch.ElapsedMilliseconds;
+            CSiteUtility.WriteLog("500개 발행 : stop", elapse.ToString());
+
         }
     }
 }
